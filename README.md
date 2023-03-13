@@ -1,5 +1,5 @@
 # DSA
-##Data Structures and Algorithms Questions
+## Data Structures and Algorithms Questions
 
 Want to start a journey through Data Structures and Algorithms but are overwhelmed where to start and how to much? Scared to see hundreds on questions on different websites?
 

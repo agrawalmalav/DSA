@@ -9,10 +9,10 @@ abc
 
 ## Sample Output :
 
-abc
-acb
-bac
-bca
-cab
-cba
+abc  
+acb  
+bac  
+bca  
+cab  
+cba  
 

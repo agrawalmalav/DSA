@@ -1,23 +1,23 @@
-#Problem Statement
+# Problem Statement
 
 Given an integer array (of length n), find and return all the subsets of input array.
 Subsets are of length varying from 0 to n, that contain elements of the array. But the order of elements should remain same as in the input array.
 
 Note : The order of subsets are not important.
 
-#Input format :
+# Input format :
 
 Line 1 : Size of array
 
 Line 2 : Array elements (separated by space)
 
 
-#Sample Input:
+# Sample Input:
 
 3
 15 20 12
 
-#Sample Output:
+# Sample Output:
 
 [] (this just represents an empty array, don't worry about the square brackets)
 12 

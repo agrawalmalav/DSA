@@ -20,12 +20,10 @@ class Graph:
             self.adjMat[v2][v1] = 0
         return
         
-    def bfs(self):
-        if self.nVertices >0:
-            visited = [False for i in range(self.nVertices)]
-            q = queue.Queue()
-            q.put(0)
-            visited[0] = True
+    def __bfsHelper(self, visited, sv, q):
+        
+            q.put(sv)
+            visited[sv] = True
             while not q.empty():
                 v= q.get()
                 print(v, end= ' ')
@@ -33,20 +31,14 @@ class Graph:
                     if self.adjMat[v][i] >0 and visited[i] == False:
                         q.put(i)
                         visited[i] = True
-            
-            while False in visited:
-                #print('elements left', visited)
-                idx = visited.index(False)
-                visited[idx] = True
-                q.put(idx)
-                while not q.empty():
-                    v= q.get()
-                    print(v, end= ' ')
-                    for i in range(self.nVertices):
-                        if self.adjMat[v][i] >0 and visited[i] == False:
-                            q.put(i)
-                            visited[i] = True
 
+    def bfs(self):
+        if self.nVertices >0:
+            visited = [False for i in range(self.nVertices)]
+            q = queue.Queue()
+            for i in range(self.nVertices):
+                if visited[i] is False:
+                    self.__bfsHelper(visited, i, q)
 
                 
         return

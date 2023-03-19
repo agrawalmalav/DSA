@@ -27,7 +27,9 @@ class Graph:
         
     def dfs(self):
         visited = [False for i in range(self.nVertices)]
-        self.dfsHelper(0, visited)
+        for i in range(self.nVertices):
+            if visited[i] is False:
+                self.dfsHelper(i, visited)
         
     
     def __str__(self):

@@ -1,31 +1,37 @@
- Sum of digits (recursive)
-Send Feedback
-Write a recursive function that returns the sum of the digits of a given integer.
-Input format :
+from os import *
+from sys import *
+from collections import *
+from math import *
 
-Integer N
+from os import *
+from sys import *
+from collections import *
+from math import *
 
-Output format :
+from os import *
+from sys import *
+from collections import *
+from math import *
 
-Sum of digits of N
+from os import *
+from sys import *
+from collections import *
+from math import *
 
-Constraints :
+from os import *
+from sys import *
+from collections import *
+from math import *
 
-0 <= N <= 10^9
+## Read input as specified in the question.
+## Print output as specified in the question.
 
-Sample Input 1 :
+def sumOfDigits(n):
+    if n//10 == 0:
+        return n
 
-12345
+    return n%10 + sumOfDigits(n//10)
 
-Sample Output 1 :
 
-15
-
-Sample Input 2 :
-
-9
-
-Sample Output 2 :
-
-9
-
+n = int(input())
+print(sumOfDigits(n))

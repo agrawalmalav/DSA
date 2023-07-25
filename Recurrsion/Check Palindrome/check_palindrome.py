@@ -1,30 +1,3 @@
-from os import *
-from sys import *
-from collections import *
-from math import *
-
-from os import *
-from sys import *
-from collections import *
-from math import *
-
-from os import *
-from sys import *
-from collections import *
-from math import *
-
-from os import *
-from sys import *
-from collections import *
-from math import *
-
-from os import *
-from sys import *
-from collections import *
-from math import *
-
-## Read input as specified in the question.
-## Print output as specified in the question.
 
 def checkPalindrome(string):
     if len(string) ==0 or len(string) == 1:

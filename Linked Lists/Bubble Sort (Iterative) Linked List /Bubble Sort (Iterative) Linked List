@@ -1,0 +1,117 @@
+from sys import stdin
+
+#Following is the Node class already written for the Linked List
+class Node :
+    def __init__(self, data) :
+        self.data = data
+        self.next = None
+
+def swap(prev, curr, head):
+    if prev != None:
+        prev.next = curr.next
+        curr.next = curr.next.next
+        prev.next.next = curr
+        prev = prev.next
+    else:
+        head = curr.next
+        curr.next = head.next
+        head.next = curr
+        prev = head
+    return prev, curr, head
+        
+def length(head):
+    i = 0
+    while head!= None:
+        head= head.next
+        i+=1
+    return i
+
+
+def bubbleSort(head) :
+	#Your code goes here
+    if head== None or head.next == None:
+        return head
+    len = length(head)
+
+    for x in range(len-1):
+        curr= head
+        prev= None
+        for k in range(len - x - 1):
+            if curr.data > curr.next.data:
+                prev, curr, head = swap(prev, curr, head)
+            else:
+                curr = curr.next
+                if prev == None:
+                    prev = head
+                else:
+                    prev = prev.next
+
+    return head
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def takeInput() :
+    head = None
+    tail = None
+
+    datas = list(map(int, stdin.readline().rstrip().split(" ")))
+
+    i = 0
+    while (i < len(datas)) and (datas[i] != -1) :
+        data = datas[i]
+        newNode = Node(data)
+
+        if head is None :
+            head = newNode
+            tail = newNode
+
+        else :
+            tail.next = newNode
+            tail = newNode
+
+        i += 1
+
+    return head
+
+
+
+def printLinkedList(head) :
+
+    while head is not None :
+        print(head.data, end = " ")
+        head = head.next
+
+    print()
+
+
+#main
+head = takeInput()
+head = bubbleSort(head)
+printLinkedList(head)

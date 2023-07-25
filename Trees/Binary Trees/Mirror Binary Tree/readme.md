@@ -3,7 +3,8 @@ Send Feedback
 For a given Binary Tree of type integer, update it with its corresponding mirror image.
 Example:
 
-Alt text
+![image](https://github.com/agrawalmalav/DSA/assets/51107910/75efabe8-7302-4068-bc44-c0adfc1df6be)
+
 Input Format:
 
 The first and the only line of input will contain the node data, all separated by a single space. Since -1 is used as an indication whether the left or right node data exist for root, it will not be a part of the node data.
